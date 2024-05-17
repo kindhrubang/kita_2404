@@ -96,11 +96,10 @@ SELECT sum(saleprice) as "총판"
 from orders
 WHERE orderid = 2;
 
-
-SELECT customer.name, SUM(saleprice)
-FROM Orders, customer
-WHERE customer.custid = 2 and 2 = orders.custid
-group by custid;
+SELECT Customer.name, sum(Orders.saleprice) as 총판
+FROM Orders,Customer 
+WHERE Orders.custid = Customer.custid and orders.custid = 2
+group by customer.name;
 --Task5_0517. 가격이 8,000원 이상인 도서를 구매한 고객에 대하여 고객별 주문 도서의 총 수량을 구하시오. 
 --단, 두 권 이상 구매한 고객만 구하시오.
 
