@@ -1,0 +1,3 @@
+SECRET_KEY = '099a14a72d1e92059d9cec8daeadf001b118d9ef2a58751a'
+SQLALCHEMY_DATABASE_URI = "mysql://kita:kita@localhost:3306/kita_db"
+SQLALCHEMY_TRACK_MODIFICATIONS = False
